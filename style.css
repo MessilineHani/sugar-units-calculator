@@ -147,5 +147,8 @@ p span:not(.result){
         input[type="number"],select{
             width: 100%;
         }
+        .calc-result{
+            transform: none;
+        }
     }   
 }
