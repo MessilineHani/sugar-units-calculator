@@ -126,5 +126,27 @@ p span:not(.result){
     }
     input[type="submit"],p{
         margin: 10px 0;
+        min-width: 300px;
+    }
+    p{
+        margin-right:10px ;
+    }
+}
+@media (max-width:605px) {
+    .food-items{
+        width: 100%;
+    }
+    .food-info{
+        width: 85%;
+        min-width: unset;
+        flex-direction:column; 
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow:hidden;
+    }
+
+    input[type="number"],select{
+        max-width: ;
     }
 }
