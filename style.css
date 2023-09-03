@@ -19,9 +19,10 @@ body{
 h1{
     text-transform: uppercase;
     margin: 20px 0;
+    text-align: center;
 }
 .food-items{
-    width:calc(50% + 40px);
+    width:60%;
 }
 .food-item{
     width: 100%;
@@ -52,7 +53,7 @@ button{
     width: calc(100% - 35px);
     max-width: 650px;
     min-width:550px ;
-    height: 15vh;
+    height: 20vh;
     overflow: hidden;
 }
 input[type="number"],select,input[type="submit"]{
@@ -67,7 +68,6 @@ label{
     display: block;
     width: 36%;
     margin: auto;
-    margin-top: 10px;
     height: fit-content;
     min-width: 245px;
 }
@@ -131,22 +131,13 @@ p span:not(.result){
     p{
         margin-right:10px ;
     }
-}
-@media (max-width:605px) {
-    .food-items{
-        width: 100%;
-    }
-    .food-info{
-        width: 85%;
-        min-width: unset;
-        flex-direction:column; 
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        overflow:hidden;
-    }
-
-    input[type="number"],select{
-        max-width: ;
-    }
+    @media (max-width:605px) {
+        .food-items{
+            width: 100%;
+        }
+        .food-info{
+            width: 90%;
+            min-width: unset;
+        }
+    }   
 }
