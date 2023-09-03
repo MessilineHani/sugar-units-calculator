@@ -7,7 +7,7 @@
 body{
     width:100%;
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url(./footage/images/background2.jpg) center scroll no-repeat;
+    background:linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0)),url(./footage/images/background2.jpg) center scroll no-repeat;
     background-size: cover;
 }
 .main-container{
@@ -66,6 +66,15 @@ input[type="number"],select,input[type="submit"]{
     height: 35px;
     font-size: 18px;
 }
+input[type="number"],select{
+    background: rgba(0, 0, 0, 0.28);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(0, 0, 0, 0.3);
+color: #fff;
+}
 label{
     display: block;
     width: 36%;
@@ -83,10 +92,14 @@ option{
 }
 
 input[type="submit"],p{
-    border: 2px solid black;
-    background-color: transparent;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     height: 40px;
-    color: #000;
+    color: #fff;
     max-width: 280px;
     min-width: 200px;
     margin: 10px auto;
@@ -104,7 +117,6 @@ p{
     width: 50%;
     padding: 5px 5px;
     font-size: 18px;
-
     display: flex;
     justify-content: space-between;
 }
