@@ -46,9 +46,12 @@ button{
     display: flex;
     flex-wrap: wrap;
     border: 1px solid #000;
+ 
 }
 .food-info{
     width: calc(100% - 35px);
+    max-width: 650px;
+    min-width:550px ;
     height: 15vh;
     overflow: hidden;
 }
@@ -74,13 +77,20 @@ option{
 .calc-result{
     border: none;
     transform: translateX(-20px);
+    flex-wrap: nowrap;
 }
-input[type="submit"]{
+
+input[type="submit"],p{
     border: 2px solid black;
     background-color: transparent;
-    color: #000;
-    font-size: 16px;
     height: 40px;
+    color: #000;
+    max-width: 280px;
+    min-width: 200px;
+    margin: 10px auto;
+}
+input[type="submit"]{
+    font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -90,18 +100,31 @@ input[type="submit"]:hover{
 }
 p{
     width: 50%;
-    max-width: 250px;
-    height: 40px;
     padding: 5px 5px;
     font-size: 18px;
-    border: 2px solid black;
-    margin: 10px auto;
+
     display: flex;
     justify-content: space-between;
+}
+p:nth-child(1){
+    margin-right: 10px;
+}
+p:nth-child(2){
+    margin-left: 10px;
 }
 p span{
     margin: auto 0;
 }
 p span:not(.result){
     text-transform: uppercase;
+}
+@media (max-width: 767px){
+    .calc-result{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type="submit"],p{
+        margin: 10px 0;
+    }
 }

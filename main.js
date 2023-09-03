@@ -38,16 +38,23 @@ function removeFoodItem() {
   const added_food_input = document.querySelectorAll(".food-item");
   added_food_input.forEach(el => el.remove());
 }
-
+function changeHeight(){
+  if(container.childElementCount > 4){
+    document.body.style.height = "fit-content";
+  }else{
+    document.body.style.height = "100vh";
+  }
+}
 function add_remove(containerId) {
   if (containerId === "add-item") {
     newfoodInput();
     if (container.childElementCount > 4) {
-      document.body.style.height = "fit-content";
+      changeHeight()
     }
   } else {
     const itemToRemove = document.getElementById(containerId);
     itemToRemove.remove();
+    changeHeight()
   }
 }
 
