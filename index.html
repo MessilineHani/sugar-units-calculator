@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insuline Units Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+    <div class="main-container">
+        <h1>insulin units Calculator</h1>
+        <div class="food-items">
+            <div class="food-item">
+                <div class="food-info">
+                <label for="food-weight">Enter your food weight</label>
+                <label for="food-category">What are you going to eat</label>
+                <input type="number" name="food-info" id="food-weight" value="0" min="0">            
+                <select name="food-info" id="food-category" class="food-category">
+                    <option>ماذا ستأكل</option>
+                </select>
+                </div>       
+            <button  id="add-item" onclick="add_remove(this.id)"><img src="./footage/images/add.png" alt="Add item"></button>
+            </div>
+        </div>
+        <div class="calc-result">
+        <input type="submit" value="Calculate" id="calc-btn">
+        <p><span class="result" id="result">0</span><span>unit</span></p>            
+        </div>
+    </div>
+    <script src="./main.js" defer></script>
+</body>
+</html>

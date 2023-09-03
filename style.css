@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+}
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.food-items{
+    width:calc(50% + 40px);
+}
+.food-item{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+button{
+    background: transparent;
+    border:none;
+    cursor: pointer;
+}
+.food-item img{
+    height: 30px;
+    margin-left: 10px;
+}
+.food-info,.calc-result{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+}
+.food-info{
+    width: calc(100% - 35px);
+    height: 15vh;
+    overflow: hidden;
+}
+input[type="number"],select,input[type="submit"]{
+    width: 50%;
+    padding: 5px calc(3% /2);
+    max-width: 250px;
+    margin: 10px auto;
+    height: 35px;
+    font-size: 18px;
+}
+label{
+    display: block;
+    width: 36%;
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    min-width: 245px;
+}
+option{
+    text-transform: capitalize;
+}
+.calc-result{
+    border: none;
+    transform: translateX(-20px);
+}
+input[type="submit"]{
+    border: 2px solid black;
+    background-color: transparent;
+    color: #000;
+    font-size: 16px;
+    height: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background-color: #000;
+    color: #ffff;
+}
+p{
+    width: 50%;
+    max-width: 250px;
+    height: 40px;
+    padding: 5px 5px;
+    font-size: 18px;
+    border: 2px solid black;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+p span{
+    margin: auto 0;
+}
+p span:not(.result){
+    text-transform: uppercase;
+}
