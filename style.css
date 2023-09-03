@@ -7,6 +7,8 @@
 body{
     width:100%;
     height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url(./footage/images/background2.jpg) center scroll no-repeat;
+    background-size: cover;
 }
 .main-container{
     width: 100%;
@@ -131,13 +133,19 @@ p span:not(.result){
     p{
         margin-right:10px ;
     }
-    @media (max-width:605px) {
+    @media (max-width:597px) {
         .food-items{
             width: 100%;
         }
         .food-info{
             width: 90%;
             min-width: unset;
+            flex-wrap: nowrap;
+            flex-direction:column ;
+            height: 30vh;
+        }
+        input[type="number"],select{
+            width: 100%;
         }
     }   
 }
