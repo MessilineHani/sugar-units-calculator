@@ -7,16 +7,23 @@
 body{
     width:100%;
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.10),rgba(0,0,0,0)),url(./footage/images/background2.jpg) center scroll no-repeat;
+    background:url(./footage/images/background2.jpg) center scroll no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main-container{
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    min-width: 680px;
+    height:  fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #fff;
+    border-radius: 25px;
+    margin: 0 auto;
 }
 h1{
     text-transform: uppercase;
@@ -24,7 +31,13 @@ h1{
     text-align: center;
 }
 .food-items{
-    width:60%;
+    width:100%;
+    height: fit-content;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .food-item{
     width: 100%;
@@ -33,15 +46,27 @@ h1{
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+    animation: food-item-apear 800ms ease-in-out;
+}
+@keyframes food-item-apear{
+    0%{
+        opacity: 0;
+        filter: blur(3px);
+        transform: translateY(50%);
+    }
 }
 button{
     background: transparent;
     border:none;
     cursor: pointer;
 }
+
 .food-item img{
-    height: 30px;
+    height: 40px;
     margin-left: 10px;
+}
+button#add-item{
+    height: 20px;
 }
 .food-info,.calc-result{
     width: 50%;
@@ -56,7 +81,16 @@ button{
     max-width: 650px;
     min-width:550px ;
     height: 20vh;
-    overflow: hidden;
+    overflow: hidden;       
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: ;
+    background: rgba(255, 218, 0, 0.25);
+border-radius: 16px;;
+backdrop-filter: blur(4.4px);
+-webkit-backdrop-filter: blur(4.4px);
+border: 1px solid rgba(255, 218, 0, 0.33);
 }
 input[type="number"],select,input[type="submit"]{
     width: 50%;
@@ -67,13 +101,15 @@ input[type="number"],select,input[type="submit"]{
     font-size: 18px;
 }
 input[type="number"],select{
-    background: rgba(0, 0, 0, 0.28);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(0, 0, 0, 0.3);
-color: #fff;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    color: #fff;
+    outline: none;
+    text-align: right;
 }
 label{
     display: block;
@@ -81,6 +117,7 @@ label{
     margin: auto;
     height: fit-content;
     min-width: 245px;
+    color: #131314;
 }
 option{
     text-transform: capitalize;
@@ -92,7 +129,7 @@ option{
 }
 
 input[type="submit"],p{
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -133,6 +170,9 @@ p span:not(.result){
     text-transform: uppercase;
 }
 @media (max-width: 767px){
+    .main-container{
+        width: 85%;
+    }
     .calc-result{
         flex-direction: column;
         justify-content: center;
@@ -146,14 +186,16 @@ p span:not(.result){
         margin-right:10px ;
     }
     @media (max-width:597px) {
+        .main-container{
+            min-width: unset;
+        }
         .food-items{
             width: 100%;
+            
         }
         .food-info{
             width: 90%;
             min-width: unset;
-            flex-wrap: nowrap;
-            flex-direction:column ;
             height: 30vh;
         }
         input[type="number"],select{

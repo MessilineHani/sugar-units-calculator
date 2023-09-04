@@ -5,7 +5,6 @@ const food_category = document.querySelectorAll(".food-category");
 const container = document.querySelector(".food-items");
 const add_food_btn = document.getElementById("add-item");
 let counter = 0;
-
 function newfoodInput() {
   counter++;
   const foodItem = document.createElement("div");
@@ -18,16 +17,16 @@ function newfoodInput() {
 
   foodItem.innerHTML = `
     <div class="food-info">
-      <label for="food-weight${counter}">Enter your food weight</label>
-      <label for="food-category${counter}">What are you going to eat</label>
+      <label for="food-weight${counter}">Enter your food weight:</label>
       <input type="number" name="food-info" id="food-weight${counter}" value="0" min="0">
+      <label for="food-category${counter}">What are you going to eat:</label>
       <select name="food-info" id="food-category${counter}" class="food-category">
         <option>ماذا ستأكل</option>
         ${foodCategoryOptions}
       </select>
     </div>
     <button onclick="add_remove('added-food-input-${counter}')">
-      <img src="./footage/images/remove.png" alt="remove item">
+      <img src="./footage/images/close.png" alt="remove item">
     </button>
   `;
 
@@ -39,18 +38,17 @@ function removeFoodItem() {
   added_food_input.forEach(el => el.remove());
 }
 function changeHeight(){
-  if(container.childElementCount > 4){
+  if(container.childElementCount >= 3){
     document.body.style.height = "fit-content";
+    document.body.style.backgroundSize = "cover"
   }else{
     document.body.style.height = "100vh";
   }
 }
 function add_remove(containerId) {
   if (containerId === "add-item") {
-    newfoodInput();
-    if (container.childElementCount > 4) {
+      newfoodInput();
       changeHeight()
-    }
   } else {
     const itemToRemove = document.getElementById(containerId);
     itemToRemove.remove();
