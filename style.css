@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     background: #fff;
     border-radius: 25px;
-    margin: 0 auto;
+    margin: 0 auto  ;
 }
 h1{
     text-transform: uppercase;
@@ -110,6 +110,9 @@ input[type="number"],select{
     color: #fff;
     outline: none;
     text-align: right;
+}
+input[type="number"]:focus,select:focus{
+    background: rgba(0, 0, 0, 0.50)
 }
 label{
     display: block;
