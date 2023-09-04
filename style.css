@@ -148,6 +148,15 @@ input[type="submit"]{
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
+    animation: submit-button-apear 800ms ease-in-out;
+}
+
+@keyframes submit-button-apear {
+    0%{
+        opacity: 0;
+        filter: blur(3px);
+        transform:translateX(-50%) ;
+    }
 }
 input[type="submit"]:hover{
     background-color: #000;
@@ -159,6 +168,14 @@ p{
     font-size: 18px;
     display: flex;
     justify-content: space-between;
+    animation: result-paragraph-apear 800ms ease-in-out;
+}
+@keyframes result-paragraph-apear {
+    0%{
+        opacity: 0;
+        filter: blur(3px);
+        transform:translateX(50%) ;
+    }
 }
 p:nth-child(1){
     margin-right: 10px;
