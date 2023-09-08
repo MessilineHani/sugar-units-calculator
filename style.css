@@ -7,7 +7,7 @@
 body{
     width:100%;
     height:100vh;
-    background:url(./footage/images/background2.jpg) center scroll no-repeat;
+    background:url(./footage/images/4038031.jpg) center scroll no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     background: #fff;
     border-radius: 25px;
-    margin: 0 auto  ;
+    margin: 10px auto  ;
 }
 h1{
     text-transform: uppercase;
@@ -62,11 +62,8 @@ button{
 }
 
 .food-item img{
-    height: 40px;
+    height: 30px;
     margin-left: 10px;
-}
-button#add-item{
-    height: 20px;
 }
 .food-info,.calc-result{
     width: 50%;
@@ -85,11 +82,11 @@ button#add-item{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 218, 0, 0.25);
-border-radius: 16px;;
-backdrop-filter: blur(4.4px);
--webkit-backdrop-filter: blur(4.4px);
-border: 1px solid rgba(255, 218, 0, 0.33);
+    background: rgba(200, 254, 192, 0.57);
+    border-radius: 16px;;
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+    border: rgba(200, 254, 192, 0.33);
 }
 input[type="number"],select,input[type="submit"]{
     width: 50%;
@@ -131,12 +128,12 @@ option{
 }
 
 input[type="submit"],p{
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(92, 37, 242, 0.57);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(92, 37, 242, 0.33);
     height: 40px;
     color: #fff;
     max-width: 280px;

@@ -26,13 +26,12 @@ function newfoodInput() {
       </select>
     </div>
     <button onclick="add_remove('added-food-input-${counter}')">
-      <img src="./footage/images/close.png" alt="remove item">
+      <img src="./footage/images/remove.png" alt="remove item">
     </button>
   `;
 
   container.appendChild(foodItem);
 }
-
 function removeFoodItem() {
   const added_food_input = document.querySelectorAll(".food-item");
   added_food_input.forEach(el => el.remove());
@@ -45,7 +44,7 @@ function changeHeight(){
     document.body.style.height = "100vh";
   }
 }
-function add_remove(containerId) {
+  function add_remove(containerId) {
   if (containerId === "add-item") {
       newfoodInput();
       changeHeight()
@@ -59,7 +58,7 @@ function add_remove(containerId) {
 const food_names = ["frites", "Lentilles", "riz", "pates","kesra"];
 const sugar_in100gOf_food_items = [40, 20, 30, 30,60];
 
-function createFoodObject(name, sugarIn100g) {
+try{function createFoodObject(name, sugarIn100g) {
   return { name, sugarIn100g };
 }
 
@@ -104,4 +103,6 @@ calc_btn.onclick = () => {
     window.alert("10 is the minimum weight");
     result_output.textContent = "0";
   }
-};
+};}catch(err){
+  console.log(err.message);
+}
