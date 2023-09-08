@@ -13,6 +13,15 @@ body{
     justify-content: center;
     align-items: center;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #cecece;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #ff8eac;
+}
 .main-container{
     width: 60%;
     min-width: 680px;
