@@ -14,7 +14,7 @@ function newfoodInput() {
 
   const foodCategoryOptions = food_names
     .map(name => `<option>${name}</option>`)
-    .join("");
+    .join(""); 
 
   foodItem.innerHTML = `
     <div class="food-info">

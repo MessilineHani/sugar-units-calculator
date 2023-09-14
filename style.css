@@ -12,13 +12,17 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-
 ::-webkit-scrollbar{
     width: 10px;
 }
 ::-webkit-scrollbar-thumb{
+    background-color: #ececec;
+}
+::-webkit-scrollbar-thumb{
     background: #cecece;
+    border-radius: 35px;
 }
 ::-webkit-scrollbar-thumb:hover{
     background: #ff8eac;
@@ -147,6 +151,7 @@ input[type="number"],select{
     color: #fff;
     outline: none;
     text-align: left;
+    margin: auto;
 }
 input[type="number"]:focus,select:focus{
     background: rgba(0, 0, 0, 0.50)
@@ -262,6 +267,25 @@ input[type="submit"]:hover{
         }
         .calc-result{
             transform: none;
+        }
+        .langs{
+            width: 30%;
+        }
+        @media (max-width:360px){
+            .main-container{
+                width: 95%;
+            }
+            .main-container .food-items .food-item img{
+                height: 20px;
+            }
+            .main-container .calc-result{
+                width: 90%;
+            }
+            .main-container .calc-result input[type="submit"], .main-container .calc-result p{
+                width: 100%;
+                min-width: unset;
+                max-width: unset;
+            }
         }
     }   
 }
