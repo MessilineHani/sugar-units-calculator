@@ -40,6 +40,37 @@ h1{
     margin: 20px 0;
     text-align: center;
 }
+.change-language{
+    width: 100%;
+    height: fit-content;
+}
+.change-language p{
+    margin: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(156, 0, 0);
+}
+.langs{
+    width: 15%;
+    height: 30px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(92, 37, 242, 0.33);
+    border-radius: 35px;
+    overflow: hidden;
+}
+.langs button{
+    margin: 0 ;
+    height: 100%;
+    width: 100%;    
+    cursor: not-allowed;
+}
+/*.langs button:hover, .langs button.selected{
+    background-color: #000;
+    color: #fff;
+}*/
 .food-items{
     width:100%;
     height: fit-content;
@@ -89,9 +120,8 @@ button{
     min-width:550px ;
     height: 20vh;
     overflow: hidden;       
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     background: rgba(200, 254, 192, 0.57);
     border-radius: 16px;;
     backdrop-filter: blur(4.4px);
@@ -100,7 +130,7 @@ button{
     
 }
 input[type="number"],select,input[type="submit"]{
-    width: 50%;
+    width: 80%;
     padding: 5px calc(3% /2);
     max-width: 250px;
     margin: 10px auto;
@@ -116,7 +146,7 @@ input[type="number"],select{
     border: 1px solid rgba(0, 0, 0, 0.05);
     color: #fff;
     outline: none;
-    text-align: right;
+    text-align: left;
 }
 input[type="number"]:focus,select:focus{
     background: rgba(0, 0, 0, 0.50)
@@ -134,11 +164,10 @@ option{
 }
 .calc-result{
     border: none;
-    transform: translateX(-20px);
     flex-wrap: nowrap;
 }
 
-input[type="submit"],p{
+input[type="submit"],.calc-result p{
     background: rgba(92, 37, 242, 0.57);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -170,7 +199,7 @@ input[type="submit"]:hover{
     background-color: #000;
     color: #ffff;
 }
-p{
+.calc-result p{
     width: 50%;
     padding: 5px 5px;
     font-size: 18px;
@@ -185,16 +214,16 @@ p{
         transform:translateX(50%) ;
     }
 }
-p:nth-child(1){
+.calc-result p:nth-child(1){
     margin-right: 10px;
 }
-p:nth-child(2){
+.calc-result p:nth-child(2){
     margin-left: 10px;
 }
-p span{
+.calc-result p span{
     margin: auto 0;
 }
-p span:not(.result){
+.calc-result p span:not(.result){
     text-transform: uppercase;
 }
 @media (max-width: 767px){
@@ -206,11 +235,11 @@ p span:not(.result){
         justify-content: center;
         align-items: center;
     }
-    input[type="submit"],p{
+    input[type="submit"], .calc-result p{
         margin: 10px 0;
         min-width: 300px;
     }
-    p{
+    .calc-result p{
         margin-right:10px ;
     }
     @media (max-width:597px) {
@@ -223,6 +252,7 @@ p span:not(.result){
             
         }
         .food-info{
+            grid-template-columns: 1fr;
             width: 90%;
             min-width: unset;
             height: 30vh;

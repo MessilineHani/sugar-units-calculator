@@ -9,25 +9,32 @@
 </head>
 <body id="body">
     <div class="main-container">
-        <h1 id="title">Insuline Units Calculator</h1>
+       <h1 id="title">Insuline Units Calculator</h1>
+        <div class="change-language">
+        <div class="langs">
+            <button title="select language" class="lang" id="ar">AR</button>
+            <button title="select language" class="selected lang" id="en">EN</button>
+        </div>
+        <p>Coming soon.</p>
+       </div>
         <div class="food-items">
             <div class="food-item">
                 <div class="food-info">
-                <label for="food-weight">Enter your food weight:</label>
+                <label for="food-weight" class="" id="fwl">Enter your food weight (g):</label>
                 <input type="number" name="food-info" id="food-weight" value="0" min="0">    
-                <label for="food-category">What are you going to eat:</label>
+                <label for="food-category" id="fcl">What are you going to eat:</label>
                 <select name="food-info" id="food-category" class="food-category">
-                    <option>ماذا ستأكل</option>
+                    <option id="co">Choose option</option>
                 </select>
                 </div>       
-            <button  id="add-item" onclick="add_remove(this.id)"><img src="./footage/images/add.png" alt="Add item"></button>
+            <button  id="add-item" onclick="add_remove(this.id)"><img src="./footage/images/add.png" alt="Add item" title="Add"></button>
             </div>
         </div>
         <div class="calc-result">
-        <input type="submit" value="Calculate" id="calc-btn">
+        <input type="submit" value="Calculate" id="calc-btn"  title="Calculate">
         <p><span class="result" id="result">0</span><span>unit</span></p>            
         </div>
     </div>
-    <script src="./main.js" defer></script>
+    <script src="./main.js" defer id="script"></script>
 </body>
 </html>

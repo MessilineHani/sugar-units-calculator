@@ -4,6 +4,7 @@ const calc_btn = document.getElementById("calc-btn");
 const food_category = document.querySelectorAll(".food-category");
 const container = document.querySelector(".food-items");
 const add_food_btn = document.getElementById("add-item");
+/* Dynamic inputs creating */
 let counter = 0;
 function newfoodInput() {
   counter++;
@@ -21,12 +22,12 @@ function newfoodInput() {
       <input type="number" name="food-info" id="food-weight${counter}" value="0" min="0">
       <label for="food-category${counter}">What are you going to eat:</label>
       <select name="food-info" id="food-category${counter}" class="food-category">
-        <option>ماذا ستأكل</option>
+        <option>Choose option</option>
         ${foodCategoryOptions}
       </select>
     </div>
     <button onclick="add_remove('added-food-input-${counter}')">
-      <img src="./footage/images/remove.png" alt="remove item">
+      <img src="./footage/images/remove.png" alt="remove item" title="remove">
     </button>
   `;
 
@@ -47,17 +48,62 @@ function changeHeight(){
   function add_remove(containerId) {
   if (containerId === "add-item") {
       newfoodInput();
-      changeHeight()
+      changeHeight();
   } else {
     const itemToRemove = document.getElementById(containerId);
     itemToRemove.remove();
     changeHeight()
   }
 }
+// not ready yet
+/*const langs = document.querySelectorAll(".lang");
+langs.forEach(lang =>{
+  lang.addEventListener("click", () =>{
+    let fwl = document.getElementById("fwl");
+    let fcl = document.getElementById("fcl");
+    let co = document.getElementById("co");
+      switch(lang.id){
+        case "ar": lang.classList.add("selected");
+           document.getElementById("en").classList.remove("selected");
+           fwl.textContent = ":كم  ستأكل  (غ)";
+           fcl.textContent = ":ماذا سـتأكل";
+           co.textContent = "اختر";
+           fwl.style.gridColumn  = "2/3";
+           fwl.style.gridRow = "1/2";
+           fwl.style.textAlign = "right"
+           fcl.style.gridColumn  = "2/3";
+           fcl.style.gridRow = "2/2";
+           fcl.style.textAlign = "right";
+           calc_btn.value = "حساب";
+           food_category.forEach(fc =>{
+            fc.style.textAlign = "right";
+           })
+           food_weight_input.style.textAlign = "right";
+        break
+        case "en": lang.classList.add("selected");
+           document.getElementById("ar").classList.remove("selected");
+           fwl.textContent = "Enter your food weight (g):";
+           fcl.textContent = "What are you going to eat:";
+           co.textContent = "Choose option";
+           fwl.style.gridColumn  = "unset";
+           fwl.style.gridRow = "unset";
+           fwl.style.textAlign = "left"
+           fcl.style.gridColumn  = "unset";
+           fcl.style.gridRow = "unset";
+           fcl.style.textAlign = "left";
+           calc_btn.value = "calculate";
+           food_category.forEach(fc =>{
+            fc.style.textAlign = "left";
+           })
+           food_weight_input.style.textAlign = "left";
+        break
+      }
+                                      })
+                     })*/
+/* calculating needed insulin uints */
 
-const food_names = ["frites", "Lentilles", "riz", "pates","kesra"];
+const  food_names = ["frites", "Lentilles", "riz", "pates","kesra"];
 const sugar_in100gOf_food_items = [40, 20, 30, 30,60];
-
 try{function createFoodObject(name, sugarIn100g) {
   return { name, sugarIn100g };
 }
