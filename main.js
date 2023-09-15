@@ -38,9 +38,9 @@ function removeFoodItem() {
   added_food_input.forEach(el => el.remove());
 }
 function changeHeight(){
-  if(container.childElementCount >= 3){
+  if(container.childElementCount > 2){
     document.body.style.height = "fit-content";
-    document.body.style.backgroundSize = "cover"
+    document.body.style.backgroundSize = "cover";
   }else{
     document.body.style.height = "100vh";
   }
@@ -49,6 +49,7 @@ function changeHeight(){
   if (containerId === "add-item") {
       newfoodInput();
       changeHeight();
+      window.scrollTo(0,document.body.scrollHeight);
   } else {
     const itemToRemove = document.getElementById(containerId);
     itemToRemove.remove();
