@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insuline Units Calculator</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./footage/images/insulin.png">
+    <title>Insulin units calculator</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
-<body id="body">
-    <div class="main-container">
-       <h1 id="title">Insuline Units Calculator</h1>
-        <div class="change-language">
-        <div class="langs">
-            <button title="select language" class="lang" id="ar">AR</button>
-            <button title="select language" class="selected lang" id="en">EN</button>
-        </div>
-        <p>Coming soon.</p>
-       </div>
-        <div class="food-items">
-            <div class="food-item">
-                <div class="food-info">
-                <label for="food-weight" class="" id="fwl">Enter your food weight (g):</label>
-                <input type="number" name="food-info" id="food-weight" value="0" min="0">    
-                <label for="food-category" id="fcl">What are you going to eat:</label>
-                <select name="food-info" id="food-category" class="food-category">
-                    <option id="co">Choose option</option>
-                </select>
-                </div>       
-            <button  id="add-item" onclick="add_remove(this.id)"><img src="./footage/images/add.png" alt="Add item" title="Add"></button>
-            </div>
-        </div>
-        <div class="calc-result">
-        <input type="submit" value="Calculate" id="calc-btn"  title="Calculate">
-        <p><span class="result" id="result">0</span><span>unit</span></p>            
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="./index.html"><img src="./footage/images/add.png" alt="SUC"></a></div>
+        <div class="navlist">
+            <ul class="list">
+                <li class="list-item" title="Home"><a href="">Home</a></li>
+                <li class="list-item" title="App"><a href="./app/app.html">App</a></li>
+                <li class="list-item" title="About us"><a href="">About</a></li>
+                <li class="list-item" title="About us"><a href="">Contact</a></li>
+            </ul>
         </div>
     </div>
-    <script src="./main.js" defer id="script"></script>
+    <div class="main-container">
+        <div class="section1">
+            <div class="sec1-info">
+                <h1><span>Insulin</span><br>units<br><span>calculator</span></h1>
+                <p>An impressive calculator created to save your time and make it easier for you to calculate needed isulin units every time you eat.</p>
+            <div class="AJS">
+                <button type="button" id="use-app" title="use app">application</button>
+                <button type="button" id="sign-up">Join</button>
+                <button type="button" id="sign-in">sign in</button>
+            </div>
+        </div>
+        <div class="images"><img src="./footage/images/sec1.png" alt=""></div>  
+        </div>
+    </div>
+    <script src="./index.js"></script>
 </body>
 </html>

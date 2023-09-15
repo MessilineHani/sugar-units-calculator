@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insuline Units Calculator</title>
+    <link rel="stylesheet" href="./app_style.css">
+    <link rel="icon" href="../footage/images/">
+</head>
+<body id="body">
+    <div class="navbar">
+        <div class="logo"><a href="../index.html"><img src="../footage/images/add.png" alt=""></a></div>
+        <div class="navlist">
+            <ul class="list">
+                <li class="list-item" title="Home"><a href="../index.html">Home</a></li>
+                <li class="list-item" title="App"><a href="#">App</a></li>
+                <li class="list-item" title="About us"><a href="">About</a></li>
+                <li class="list-item" title="About us"><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-container">
+            <div class="content">
+       <h1 id="title">Insuline Units Calculator</h1>
+        <div class="change-language">
+        <div class="langs">
+            <button title="select language" class="lang" id="ar">AR</button>
+            <button title="select language" class="selected lang" id="en">EN</button>
+        </div>
+        <p>Coming soon.</p>
+       </div>
+        <div class="food-items">
+            <div class="food-item">
+                <div class="food-info">
+                <label for="food-weight" class="" id="fwl">Enter your food weight (g):</label>
+                <input type="number" name="food-info" id="food-weight" value="0" min="0">    
+                <label for="food-category" id="fcl">What are you going to eat:</label>
+                <select name="food-info" id="food-category" class="food-category">
+                    <option id="co">Choose option</option>
+                </select>
+                </div>       
+            <button  id="add-item" onclick="add_remove(this.id)"><img src="../footage/images/add.png" alt="Add item" title="Add"></button>
+            </div>
+        </div>
+        <div class="calc-result">
+        <input type="submit" value="Calculate" id="calc-btn"  title="Calculate">
+        <p><span class="result" id="result">0</span><span>unit</span></p>            
+        </div>
+    </div>
+    </div>
+
+    <script src="./app.js" defer id="script"></script>
+</body>
+</html>
