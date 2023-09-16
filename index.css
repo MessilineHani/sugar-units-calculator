@@ -136,26 +136,50 @@ body::-webkit-scrollbar-thumb:hover{
 
 
 /* Responsive design */
-@media (max-width: 1230px) {
+@media (max-width: 1230px) {    
     .main-container .section1 .sec1-info h1{
-        letter-spacing: 10px;
+        letter-spacing: 5px;
+    }
+    .main-container .section1 .images img{
+        margin:  0 auto;
     }
     @media (max-width: 1020px){
         .main-container .section1{
-            position: relative;
+            flex-direction: column;
+            height: fit-content;
         }
         .main-container .section1 .sec1-info{
             width: 75%;
             margin: 0 auto;
             text-align: center;
+            
         }
         .main-container .section1 .images{
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            z-index: -1;
+            width: 55%;
         }
-        @media (max-width: 767px){
+        @media (max-width: 477px){
+            .main-container .section1 .sec1-info{
+                width: 85%;
+            }
+            .main-container .section1 .sec1-info h1{
+                letter-spacing: 2px;
+                font-size: 35px;
+            }
+            @media (max-width: 400px){
+                .main-container .section1 .sec1-info .AJS{
+                    flex-wrap: wrap;
+                    width: 90%;
+                    margin:  0 auto;
+                }
+                .main-container .section1 .sec1-info .AJS button{
+                    width: 45%;
+                    margin: 10px auto;
+                }
+                .main-container .section1 .sec1-info .AJS button:nth-child(3){
+                    margin: 10px auto;
+                    width: 55%;
+                }
+            }
         }
     }
     
