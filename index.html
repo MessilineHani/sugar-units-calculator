@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insulin units calculator</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="icon" href="./footage/images/insulin.png">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo"><a href="./index.html"><img src="./footage/images/add.png" alt="SUC"></a></div>
+    <div class="navbar" id="navbar">
+        <div class="logo"><img src="./footage/images/insulin.png" alt="SUC" id="logo"></div>
         <div class="navlist">
             <ul class="list">
-                <li class="list-item" title="Home"><a href="">Home</a></li>
+                <li class="list-item active" title="Home"><a href="">Home</a></li>
                 <li class="list-item" title="App"><a href="./app/app.html">App</a></li>
-                <li class="list-item" title="About us"><a href="">About</a></li>
-                <li class="list-item" title="About us"><a href="">Contact</a></li>
+                <li class="list-item" title="About us"><a>About</a></li>
+                <li class="list-item" title="About us"><a>Contact</a></li>
             </ul>
         </div>
     </div>
     <div class="main-container">
         <div class="section1">
             <div class="sec1-info">
-                <h1><span>Insulin</span><br>units<br><span>calculator</span></h1>
+                <h1><span>Insulin units</span><br>Calculator</h1>
                 <p>An impressive calculator created to save your time and make it easier for you to calculate needed isulin units every time you eat.</p>
             <div class="AJS">
                 <button type="button" id="use-app" title="use app">application</button>
@@ -33,5 +35,6 @@
         </div>
     </div>
     <script src="./index.js"></script>
+    <script src="./nav.js"></script>
 </body>
 </html>
