@@ -5,7 +5,7 @@ logo.addEventListener("click",() =>{
 })
 // menu creation 
 let menuBtn = document.createElement("img");
-menuBtn.src = "./footage/images/menu.png";
+menuBtn.src = "../footage/images/menu.png";
 menuBtn.style.width = "25px";
 menuBtn.style.margin = "auto 5%";
 menuBtn.style.display = "none";

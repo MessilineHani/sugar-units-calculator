@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 *{
     padding:0;
     margin:0;
@@ -9,19 +10,6 @@ body{
     height:fit-content;
     background:url(../footage/images/4038031.jpg) center scroll no-repeat ;
     background-size: cover;
-}
-body::-webkit-scrollbar{
-    width: 10px;
-}
-body::-webkit-scrollbar-thumb{
-    background-color: #ececec;
-}
-body::-webkit-scrollbar-thumb{
-    background: #cecece;
-    border-radius: 35px;
-}
-body::-webkit-scrollbar-thumb:hover{
-    background: rgb(92,37,242);
 }
 .home-section{
     height: 100vh;
@@ -49,6 +37,7 @@ h1{
     text-transform: uppercase;
     margin: 20px 0;
     text-align: center;
+    font-family: "Roboto";
 }
 .change-language{
     width: 100%;
@@ -145,7 +134,7 @@ input[type="number"],select,input[type="submit"]{
     max-width: 250px;
     margin: 10px auto;
     height: 35px;
-    font-size: 18px;
+    font-size: 16px;
 }
 input[type="number"],select{
     background: rgba(0, 0, 0, 0.25);
@@ -240,6 +229,10 @@ input[type="submit"]:hover{
 @media (max-width: 767px){
     .content{
         width: 85%;
+        min-width: unset;
+    }
+    .food-info{
+        min-width: unset;
     }
     .calc-result{
         flex-direction: column;

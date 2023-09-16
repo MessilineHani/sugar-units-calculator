@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -8,19 +9,6 @@ body{
     width: 100%;
     height:fit-content;
     background-color: #fff;
-}
-body::-webkit-scrollbar{
-    width: 10px;
-}
-body::-webkit-scrollbar-thumb{
-    background-color: #ececec;
-}
-body::-webkit-scrollbar-thumb{
-    background: #cecece;
-    border-radius: 35px;
-}
-body::-webkit-scrollbar-thumb:hover{
-    background: rgb(92,37,242);
 }
 .main-container{
     height: fit-content;
@@ -45,11 +33,15 @@ body::-webkit-scrollbar-thumb:hover{
     letter-spacing: 20px;
     line-height: 60px;
     color:#000;
+    font-family: "Roboto";
+    font-weight: 700;
 }
 .main-container .section1 .sec1-info p{
     font-size: 18px;
     margin: 20px 0;
     color: #171717;
+    font-family: "Open sans";
+    font-weight: 400;
 }
 .main-container .section1 .sec1-info .AJS{
     width: 100%;
@@ -69,6 +61,7 @@ body::-webkit-scrollbar-thumb:hover{
     color: #fff;
     position: relative;
     animation: floating .8s ease infinite ;
+    font-family: "Open sans";
 }
 @keyframes floating {
     0%{
