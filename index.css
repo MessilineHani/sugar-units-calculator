@@ -103,10 +103,18 @@ body{
 .main-container .section1 .images{
     width: 45%;
     margin: auto;
+
 }
 .main-container .section1 .images img{
+    transform: translateY(-20px);
     width: 100%;
     margin:  auto;
+    animation: floating-img 1s ease-in-out infinite alternate;
+}
+@keyframes floating-img {
+    100%{
+        transform: translateY(10px);
+    }
 }
 
 
@@ -158,6 +166,10 @@ body{
                 font-size: 35px;
             }
             @media (max-width: 400px){
+                .main-container .section1 .images img{
+                    animation: unset;
+                    transform:unset;
+                }
                 .main-container .section1 .sec1-info .AJS{
                     flex-wrap: wrap;
                     width: 90%;
