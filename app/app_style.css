@@ -7,8 +7,7 @@
 body{
     width:100%;
     height:fit-content;
-    background:url(../footage/images/4038031.jpg) center scroll no-repeat ;
-    background-size: cover;
+    background: #fff;
 }
 .home-section{
     height: 100vh;
@@ -28,15 +27,32 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #fff;
+    background: rgb(92,37,242);
     border-radius: 25px;
     margin: 30px auto  ;
+    position: relative;
+}
+.content::after{
+    content: "";
+    width:100% ;
+    height: 100%;
+    border-radius:inherit ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(43, 255, 255);
+    border: 1px solid rgb(92,37,242) ;
+    z-index: -1;
+    transition: all .3s ease-out;
+    transform: translateX(-10px) translateY(5px);
 }
 h1{
     text-transform: uppercase;
     margin: 20px 0;
     text-align: center;
     font-family: "Roboto";
+    color: #fefefe;
+    letter-spacing: 2px;
 }
 .change-language{
     width: 100%;
@@ -55,15 +71,17 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(92, 37, 242, 0.33);
+    background-color: rgb(255,77,105);
     border-radius: 35px;
     overflow: hidden;
+
 }
 .langs button{
     margin: 0 ;
     height: 100%;
     width: 100%;    
     cursor: not-allowed;
+    color: #fff;
 }
 /*.langs button:hover, .langs button.selected{
     background-color: #000;
@@ -120,7 +138,7 @@ button{
     overflow: hidden;       
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    background: rgba(200, 254, 192, 0.57);
+    background: rgb(255,161,0);
     border-radius: 16px;;
     backdrop-filter: blur(4.4px);
     -webkit-backdrop-filter: blur(4.4px);
@@ -167,7 +185,7 @@ option{
 }
 
 input[type="submit"],.calc-result p{
-    background: rgba(92, 37, 242, 0.57);
+    background: rgba(255,77,105,0.55);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -179,6 +197,7 @@ input[type="submit"],.calc-result p{
     min-width: 200px;
     margin: 10px auto;
     padding: 5px 15px !important;
+    transition: all .35s ease;
 }
 input[type="submit"]{
     font-size: 16px;
@@ -195,8 +214,10 @@ input[type="submit"]{
     }
 }
 input[type="submit"]:hover{
-    background-color: #000;
+    background-color: rgb(255,77,105);
+    transform: translateY(-5px);
     color: #ffff;
+    box-shadow: 0 4px 30px rgba(255,77,105, 0.35);
 }
 .calc-result p{
     width: 50%;
