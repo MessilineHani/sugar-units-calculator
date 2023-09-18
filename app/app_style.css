@@ -206,21 +206,7 @@ input[type="submit"]:hover{
     color: #ffff;
     box-shadow: 0 4px 30px rgba(255,77,105, 0.35);
 }
-.calc-result p{
-    width: 50%;
-    padding: 5px 5px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    animation: result-paragraph-apear 800ms ease-in-out;
-}
-@keyframes result-paragraph-apear {
-    0%{
-        opacity: 0;
-        filter: blur(3px);
-        transform:translateX(50%) ;
-    }
-}
+
 .result{
     width: 55%;
     padding: 5px 2.5%;
