@@ -122,14 +122,6 @@ button{
     height: 30px;
     margin-left: 10px;
 }
-.food-info,.calc-result{
-    width: 50%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #000;
- 
-}
 .food-info{
     width: calc(100% - 35px);
     max-width: 650px;
@@ -179,12 +171,7 @@ label{
 option{
     text-transform: capitalize;
 }
-.calc-result{
-    border: none;
-    flex-wrap: nowrap;
-}
-
-input[type="submit"],.calc-result p{
+input[type="submit"]{
     background: rgba(255,77,105,0.55);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -234,16 +221,31 @@ input[type="submit"]:hover{
         transform:translateX(50%) ;
     }
 }
-.calc-result p:nth-child(1){
+.result{
+    width: 55%;
+    padding: 5px 2.5%;
+    height: 40px;
+    background-color: #e7efff;
+    border-radius: 35px;
+    margin-top:20px ;
+    border: 1px solid #fefefe;
+}
+.result P{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .25rem;
+}
+.result p:nth-child(1){
     margin-right: 10px;
 }
-.calc-result p:nth-child(2){
+.result p:nth-child(2){
     margin-left: 10px;
 }
-.calc-result p span{
+.result p span{
     margin: auto 0;
 }
-.calc-result p span:not(.result){
+.result p span:not(.rslt){
     text-transform: uppercase;
 }
 @media (max-width: 767px){
@@ -270,6 +272,9 @@ input[type="submit"]:hover{
         .content{
             width: 90%;
             min-width: unset;
+        }
+        .result{
+            width: 75%;
         }
         .food-items{
             width: 100%;
@@ -300,8 +305,8 @@ input[type="submit"]:hover{
             .content .calc-result{
                 width: 90%;
             }
-            .content .calc-result input[type="submit"], .content .calc-result p{
-                width: 100%;
+            .content  input[type="submit"]{
+                width: 85%;
                 min-width: unset;
                 max-width: unset;
             }

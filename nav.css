@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 body::-webkit-scrollbar{
     width: 10px;
 }
@@ -29,6 +32,18 @@ body::-webkit-scrollbar-thumb:hover{
 .navbar .logo  img{
     width: 100%;
     cursor: pointer;    
+    animation: logo-anime .8s ease-out;
+}
+@keyframes logo-anime {
+    0%{
+        transform: translateX(-300%);
+        opacity: 0;
+        filter: blur(3px);
+    }
+    75%{
+        transform: translateX(100%) rotate(360deg);
+        opacity: 1;
+    }
 }
 .navbar .navlist{
     font-size: 18px;

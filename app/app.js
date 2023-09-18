@@ -143,6 +143,11 @@ calc_btn.onclick = () => {
       const insulinUnits =
         (parseFloat(weightInput.value) * sugarIn100g) / 100 / 11;
       totalInsulinUnits += insulinUnits;
+      window.scrollTo({
+        top:0,
+        left: 0,
+        behavior :"smooth"
+      })
     } else {
       window.alert("Invalid food category selection or weight.");
       result_output.textContent = "0";
