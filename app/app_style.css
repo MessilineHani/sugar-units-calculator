@@ -235,17 +235,6 @@ input[type="submit"]:hover{
     justify-content: space-between;
     align-items: center;
     margin: .25rem;
-}
-.result p:nth-child(1){
-    margin-right: 10px;
-}
-.result p:nth-child(2){
-    margin-left: 10px;
-}
-.result p span{
-    margin: auto 0;
-}
-.result p span:not(.rslt){
     text-transform: uppercase;
 }
 @media (max-width: 767px){
@@ -256,17 +245,9 @@ input[type="submit"]:hover{
     .food-info{
         min-width: unset;
     }
-    .calc-result{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    input[type="submit"], .calc-result p{
+    input[type="submit"]{
         margin: 10px 0;
         min-width: 300px;
-    }
-    .calc-result p{
-        margin-right:10px ;
     }
     @media (max-width:597px) {
         .content{
@@ -288,9 +269,6 @@ input[type="submit"]:hover{
         }
         input[type="number"],select{
             width: 100%;
-        }
-        .calc-result{
-            transform: none;
         }
         .langs{
             width: 30%;
