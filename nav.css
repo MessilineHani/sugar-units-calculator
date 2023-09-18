@@ -9,10 +9,9 @@ body::-webkit-scrollbar-thumb{
 }
 body::-webkit-scrollbar-thumb{
     background: #cecece;
-    border-radius: 35px;
 }
 body::-webkit-scrollbar-thumb:hover{
-    background: rgb(92,37,242);
+    background: #ffa100;
 }
 .navbar{
     width: 100%;

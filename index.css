@@ -12,7 +12,9 @@ body{
 .main-container{
     height: fit-content;
     width: 100%;
+    position: relative;
 }
+/* Section 1 */
 .main-container .section1{
     width: 100%;
     height: calc(100vh - 60px);
@@ -116,6 +118,61 @@ body{
         transform: translateY(10px);
     }
 }
+/* Section 2 */
+.main-container .section2{
+    width: 100%;
+    height: 100vh;
+    background-color: #4f52ff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main-container .section2 h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "Roboto" ,sans-serif;
+    margin: 20px auto;
+    transform: translateX(100%);
+}
+.main-container .section2 p{
+    width: 65%;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Open sans",sans-serif;
+    margin: 20px auto;
+    transform: translateX(-100%);
+}
+.main-container .section2 img{
+    width: 50%;
+    margin: 30px auto;
+    animation: floating-img 1s ease-in-out infinite alternate;
+    transform: translateY(100%);
+}
+.main-container .section2 .animate{
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 1s ease-in-out;
+}
+.main-container .section2 .show{
+    transform:unset;
+    opacity: 1;
+    filter: unset;
+}
+.main-container .section3{
+    background:  linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url(./footage/images/close-up-hands-with-medical-devices.jpg) center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.main-container .section4{
+    width: 100%;
+    height: 150vh;
+    background-color: #fff;
+}
 
 
 
@@ -128,13 +185,30 @@ body{
 
 
 
-
-
-
-
-
-
-
+.scroll{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right:30px;
+    top:80vh;
+    display: none;
+}
+.scroll img{
+    width: 100%;
+    cursor: pointer;
+    transition: transform .35s ease;
+    animation: scroll-button-apear  1s ease-out;
+}
+.scroll img:hover{
+    transform: translateY(-5px);
+}
+@keyframes scroll-button-apear {
+    0%{
+        transform:translateY(300%);
+        opacity:0;
+        filter:blur(3px);
+    }
+}
 /* Responsive design */
 @media (max-width: 1230px) {    
     .main-container .section1 .sec1-info h1{
@@ -157,6 +231,11 @@ body{
         .main-container .section1 .images{
             width: 55%;
         }
+        @media (max-width:767px) {
+            .main-container .section3{
+                background-position:  left;
+            }
+        }
         @media (max-width: 477px){
             .main-container .section1 .sec1-info{
                 width: 85%;
@@ -164,6 +243,13 @@ body{
             .main-container .section1 .sec1-info h1{
                 letter-spacing: 2px;
                 font-size: 35px;
+            }
+            .main-container .section3{
+                background-position: 15% 0;
+            }
+            .scroll{
+                bottom: 5vh;
+                left: calc(50% - 15px);
             }
             @media (max-width: 400px){
                 .main-container .section1 .images img{
