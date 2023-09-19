@@ -145,6 +145,7 @@ body{
     font-family: "Open sans",sans-serif;
     margin: 20px auto;
     transform: translateX(-100%);
+    line-height: 35px;
 }
 .main-container .section2 img{
     width: 50%;
@@ -243,6 +244,11 @@ body{
             .main-container .section1 .sec1-info h1{
                 letter-spacing: 2px;
                 font-size: 35px;
+            }
+            .main-container .section2 p{
+                width: 85%;
+                line-height: normal;
+                font-size: 16px;
             }
             .main-container .section3{
                 background-position: 15% 0;

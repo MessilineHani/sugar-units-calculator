@@ -28,11 +28,11 @@ window.addEventListener("scroll", showAnimatedEl);
 function showAnimatedEl(){
     const sec2position = section2.getBoundingClientRect();
 sec2AnimatedEl.forEach(el =>{
-    if(window.scrollY >= sec2position.top / 2.5 && window.scrollY < sec2position.bottom + window.scrollY){
+    if(window.scrollY >= sec2position.top / 2.5 && window.scrollY < sec2position.bottom + window.scrollY ){
         el.classList.add("show");
     }else{
         el.classList.remove("show")
     }
 })
 }
-showAnimatedEl()
+showAnimatedEl();
