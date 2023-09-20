@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -12,9 +13,8 @@ body{
 .main-container{
     height: fit-content;
     width: 100%;
-    position: relative;
 }
-/* Section 1 */
+/* Section 1*/
 .main-container .section1{
     width: 100%;
     height: calc(100vh - 60px);
@@ -44,6 +44,9 @@ body{
     font-family: "Open sans";
     font-weight: 400;
 }
+
+
+/**/
 .main-container .section1 .sec1-info .AJS{
     width: 100%;
     display: flex;
@@ -51,6 +54,7 @@ body{
     align-items: center;
     margin: 50px 0;
 }
+
 .main-container .section1 .sec1-info .AJS button{
     width: 30%;
     height: 40px;
@@ -60,53 +64,31 @@ body{
     cursor: pointer;
     background: rgb(92,37,242);
     color: #fff;
-    position: relative;
     animation: floating .8s ease infinite ;
     font-family: "Open sans";
 }
 @keyframes floating {
     0%{
-        top: 5px;
+        transform: translateY(5px);
     }
     100%{
-        top: -5px;
+       transform: translateY(-5px);
     }
 }
 .main-container .section1 .sec1-info .AJS button:nth-child(2),.main-container .section1 .sec1-info .AJS button:nth-child(3){
-    animation: unset;
+    animation: none;
     cursor: not-allowed;
     background-color: rgb(201,183,251);
 }
-.main-container .section1 .sec1-info .AJS button::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius:inherit ;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: rgb(43, 255, 255);
-    border: 1px solid rgb(92,37,242) ;
-    z-index: -1;
-    opacity: 0;
-    transition: all .3s ease-out;
-}
-.main-container .section1 .sec1-info .AJS button:nth-child(2)::after,.main-container .section1 .sec1-info .AJS button:nth-child(3)::after{
-    content: unset;
-}
-.main-container .section1 .sec1-info .AJS button:hover{
-    animation: unset;
-}
-.main-container .section1 .sec1-info .AJS button:hover::after{
-    opacity: 1;
-    transform: translateX(-5px) translateY(5px);
 
+.main-container .section1 .sec1-info .AJS button:nth-child(1):hover{
+    animation: none;
 }
 .main-container .section1 .images{
     width: 45%;
     margin: auto;
-
 }
+
 .main-container .section1 .images img{
     transform: translateY(-20px);
     width: 100%;
@@ -211,6 +193,8 @@ body{
     }
 }
 /* Responsive design */
+
+
 @media (max-width: 1230px) {    
     .main-container .section1 .sec1-info h1{
         letter-spacing: 5px;
@@ -236,47 +220,48 @@ body{
             .main-container .section3{
                 background-position:  left;
             }
+            @media (max-width: 477px){
+                .main-container .section1 .sec1-info{
+                    width: 85%;
+                }
+                .main-container .section1 .sec1-info h1{
+                    letter-spacing: 2px;
+                    font-size: 35px;
+                }
+                .main-container .section2 p{
+                    width: 85%;
+                    line-height: normal;
+                    font-size: 16px;
+                }
+                .main-container .section3{
+                    background-position: 15% 0;
+                }
+                .scroll{
+                    bottom: 5vh;
+                    left: calc(50% - 15px);
+                }
+                @media (max-width: 400px){
+                    .main-container .section1 .images img{
+                        animation: unset;
+                        transform:unset;
+                    }
+                    .main-container .section1 .sec1-info .AJS{
+                        flex-wrap: wrap;
+                        width: 90%;
+                        margin:  0 auto;
+                    }
+                    .main-container .section1 .sec1-info .AJS button{
+                        width: 45%;
+                        margin: 10px auto;
+                    }
+                    .main-container .section1 .sec1-info .AJS button:nth-child(3){
+                        margin: 10px auto;
+                        width: 55%;
+                    }
+                }
+            }
         }
-        @media (max-width: 477px){
-            .main-container .section1 .sec1-info{
-                width: 85%;
-            }
-            .main-container .section1 .sec1-info h1{
-                letter-spacing: 2px;
-                font-size: 35px;
-            }
-            .main-container .section2 p{
-                width: 85%;
-                line-height: normal;
-                font-size: 16px;
-            }
-            .main-container .section3{
-                background-position: 15% 0;
-            }
-            .scroll{
-                bottom: 5vh;
-                left: calc(50% - 15px);
-            }
-            @media (max-width: 400px){
-                .main-container .section1 .images img{
-                    animation: unset;
-                    transform:unset;
-                }
-                .main-container .section1 .sec1-info .AJS{
-                    flex-wrap: wrap;
-                    width: 90%;
-                    margin:  0 auto;
-                }
-                .main-container .section1 .sec1-info .AJS button{
-                    width: 45%;
-                    margin: 10px auto;
-                }
-                .main-container .section1 .sec1-info .AJS button:nth-child(3){
-                    margin: 10px auto;
-                    width: 55%;
-                }
-            }
-        }
+
     }
     
 }

@@ -1,7 +1,8 @@
 const appBtn = document.getElementById("use-app");
-appBtn.addEventListener("click", () =>{
-    window.location.href = "./app/app.html"
-});
+appBtn.onclick =() =>{
+    window.location.href = "./app/app.html";
+    console.log("hello world")
+}
 // Scroll up button
 const scrollBTN = document.getElementById("scroll-btn");
 function show_hide_SB(){ // SB = Scroll button
@@ -31,7 +32,7 @@ sec2AnimatedEl.forEach(el =>{
     if(window.scrollY >= sec2position.top / 2.5 && window.scrollY < sec2position.bottom + window.scrollY ){
         el.classList.add("show");
     }else{
-        el.classList.remove("show")
+        el.classList.remove("show");
     }
 })
 }
